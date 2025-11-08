@@ -2,6 +2,13 @@ name: Deploy to GitHub Pages
 
 on:
   push:
+    paths-ignore:
+      - "README.md"
+      - ".dockerignore"
+      - ".gitignore"
+      - "docker-compose.yml"
+      - "Dockerfile"
+      - "LICENSE"
   # Also allow manual workflow dispatch
   workflow_dispatch:
 
