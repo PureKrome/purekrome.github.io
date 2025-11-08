@@ -2,7 +2,6 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
   # Also allow manual workflow dispatch
   workflow_dispatch:
 
@@ -26,7 +25,7 @@ jobs:
         with:
           version: 10.11.1
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -45,12 +44,14 @@ jobs:
         run: pnpm run build
 
       - name: 💾 Upload artifact
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
