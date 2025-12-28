@@ -16,10 +16,19 @@ You can start using this project locally by running the following command in you
 docker compose up
 ```
 
-To commit some changes (like a new blog post), you need to make sure the code is formatted correctly. You can do this by running:
+## 🧹 Linting & Formatting
+
+Before committing changes, ensure your code is formatted and passes linting:
 
 ```bash
-docker compose exec astro npx prettier --write .
+# Check formatting (will show errors if any)
+docker compose run --rm astro npm run format:check
+
+# Auto-fix formatting
+docker compose run --rm astro npm run format
+
+# Check linting
+docker compose run --rm astro npm run lint
 ```
 
 ## 📜 License
