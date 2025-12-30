@@ -1,5 +1,5 @@
 ---
-pubDatetime: 2025-12-30T121:00:00+11:00
+pubDatetime: 2025-12-30T21:00:00+11:00
 title: AI Agent Skills and you
 slug: ai-agent-skills-and-you
 featured: true
