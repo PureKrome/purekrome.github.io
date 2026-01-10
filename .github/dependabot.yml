@@ -1,0 +1,16 @@
+# Enable version updates for npm dependencies
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    allow:
+      - dependency-type: "all"
+    ignore:
+      - dependency-name: "pnpm"
+        update-types: ["version-update:semver-major"]
