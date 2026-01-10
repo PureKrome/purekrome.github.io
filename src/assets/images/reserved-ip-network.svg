@@ -1,0 +1,108 @@
+
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00f0ff;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="reservedGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0a0a0f"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.1" stroke="#00f0ff" stroke-width="0.5">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  
+  <!-- Connection lines -->
+  <g opacity="0.3" stroke="#00f0ff" stroke-width="1" fill="none">
+    <line x1="150" y1="200" x2="400" y2="150"/>
+    <line x1="150" y1="200" x2="300" y2="350"/>
+    <line x1="400" y1="150" x2="650" y2="180"/>
+    <line x1="400" y1="150" x2="500" y2="400"/>
+    <line x1="300" y1="350" x2="500" y2="400"/>
+    <line x1="650" y1="180" x2="500" y2="400"/>
+    <line x1="200" y1="450" x2="300" y2="350"/>
+    <line x1="200" y1="450" x2="500" y2="400"/>
+  </g>
+  
+  <!-- Reserved connection lines (magenta) -->
+  <g opacity="0.4" stroke="#ff00ff" stroke-width="1.5" fill="none">
+    <line x1="400" y1="150" x2="300" y2="350"/>
+    <line x1="650" y1="180" x2="700" y2="420"/>
+    <line x1="500" y1="400" x2="700" y2="420"/>
+  </g>
+  
+  <!-- Regular nodes (cyan) -->
+  <g>
+    <!-- Node glows -->
+    <circle cx="150" cy="200" r="25" fill="url(#nodeGlow)" opacity="0.4"/>
+    <circle cx="200" cy="450" r="25" fill="url(#nodeGlow)" opacity="0.4"/>
+    
+    <!-- Node cores -->
+    <circle cx="150" cy="200" r="6" fill="#00f0ff" filter="url(#glow)"/>
+    <circle cx="200" cy="450" r="6" fill="#00f0ff" filter="url(#glow)"/>
+    <circle cx="150" cy="200" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="200" cy="450" r="3" fill="#ffffff" opacity="0.8"/>
+  </g>
+  
+  <!-- Reserved nodes (magenta) -->
+  <g>
+    <!-- Node glows -->
+    <circle cx="400" cy="150" r="30" fill="url(#reservedGlow)" opacity="0.5"/>
+    <circle cx="300" cy="350" r="30" fill="url(#reservedGlow)" opacity="0.5"/>
+    <circle cx="650" cy="180" r="30" fill="url(#reservedGlow)" opacity="0.5"/>
+    <circle cx="500" cy="400" r="30" fill="url(#reservedGlow)" opacity="0.5"/>
+    <circle cx="700" cy="420" r="30" fill="url(#reservedGlow)" opacity="0.5"/>
+    
+    <!-- Node cores -->
+    <circle cx="400" cy="150" r="7" fill="#ff00ff" filter="url(#glow)"/>
+    <circle cx="300" cy="350" r="7" fill="#ff00ff" filter="url(#glow)"/>
+    <circle cx="650" cy="180" r="7" fill="#ff00ff" filter="url(#glow)"/>
+    <circle cx="500" cy="400" r="7" fill="#ff00ff" filter="url(#glow)"/>
+    <circle cx="700" cy="420" r="7" fill="#ff00ff" filter="url(#glow)"/>
+    
+    <circle cx="400" cy="150" r="3.5" fill="#ffffff" opacity="0.9"/>
+    <circle cx="300" cy="350" r="3.5" fill="#ffffff" opacity="0.9"/>
+    <circle cx="650" cy="180" r="3.5" fill="#ffffff" opacity="0.9"/>
+    <circle cx="500" cy="400" r="3.5" fill="#ffffff" opacity="0.9"/>
+    <circle cx="700" cy="420" r="3.5" fill="#ffffff" opacity="0.9"/>
+  </g>
+  
+  <!-- Animated particles -->
+  <g opacity="0.6">
+    <circle cx="0" cy="0" r="2" fill="#00f0ff">
+      <animateMotion dur="3s" repeatCount="indefinite">
+        <mpath href="#path1"/>
+      </animateMotion>
+    </circle>
+    <circle cx="0" cy="0" r="2" fill="#ff00ff">
+      <animateMotion dur="4s" repeatCount="indefinite">
+        <mpath href="#path2"/>
+      </animateMotion>
+    </circle>
+  </g>
+  
+  <!-- Hidden paths for animation -->
+  <defs>
+    <path id="path1" d="M 150,200 L 400,150 L 650,180"/>
+    <path id="path2" d="M 400,150 L 300,350 L 500,400 L 700,420"/>
+  </defs>
+</svg>
