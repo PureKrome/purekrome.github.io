@@ -28,7 +28,7 @@ docker compose run --rm astro npm run format:check
 docker compose run --rm astro npm run format
 
 # Check linting
-docker compose run --rm astro npm run format
+docker compose run --rm astro npm run lint
 ```
 
 ## 📜 License
