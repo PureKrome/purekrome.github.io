@@ -3,9 +3,15 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
+## Curriculum vitae
+
+<a href="/assets/files/Justin_Adler_CV_2026.pdf" download>📝 Justin Adler CV March 2026</a>
+
+<a href="https://www.linkedin.com/in/justin-adler-pk/" target="_blank">🔗 LinkedIn</a>
+
 ## 👋🏻 About Me
 
-G'Day! I'm Justin Adler - a [software engineer](https://github.com/purekrome), a father, a long time fan of electronic music (who occasionally [spins vinyl / digital choons](https://www.twitch.com/purekrome)).
+G'Day! I'm Justin Adler - a [senior software engineer](https://github.com/purekrome), a father, a long time fan of electronic music (who occasionally [spins vinyl / digital choons](https://www.twitch.com/purekrome)).
 
 I'm currently working as a .NET Lead at [Angle Auto Finance](https://anglefinance.com.au) in Melbourne, Australia - which is an exciting startup revolutionizing car financing Down Under. Prior to that I've worked mainly at [Homely](https://homely.com.au) as a Senior Software Engineer and Tech Lead, as well as various contracting and consulting roles (after work) over the years. You can find my full resume and work history on [LinkedIn](https://www.linkedin.com/in/justin-adler-pk/).
 
