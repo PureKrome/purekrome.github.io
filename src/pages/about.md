@@ -5,17 +5,17 @@ title: "About"
 
 ## Curriculum vitae
 
-<a href="/assets/files/Justin_Adler_CV_2026.pdf" download>📝 Justin Adler CV March 2026</a>
+<a href="/assets/files/Justin_Adler_-_Senior_Software_Engineer_-_March_2026.pdf" download>📝 Justin Adler CV March 2026</a>
 
 <a href="https://www.linkedin.com/in/justin-adler-pk/" target="_blank">🔗 LinkedIn</a>
 
 ## 👋🏻 About Me
 
-G'Day! I'm Justin Adler - a [senior software engineer](https://github.com/purekrome), a father, a long time fan of electronic music (who occasionally [spins vinyl / digital choons](https://www.twitch.com/purekrome)).
+G'Day! I'm Justin Adler - a [senior software engineer](https://github.com/purekrome) - I love code and engineering. Also a father and a long time fan of electronic music (who occasionally [spins vinyl / digital choons](https://www.twitch.com/purekrome)).
 
-I'm currently working as a .NET Lead at [Angle Auto Finance](https://anglefinance.com.au) in Melbourne, Australia - which is an exciting startup revolutionizing car financing Down Under. Prior to that I've worked mainly at [Homely](https://homely.com.au) as a Senior Software Engineer and Tech Lead, as well as various contracting and consulting roles (after work) over the years. You can find my full resume and work history on [LinkedIn](https://www.linkedin.com/in/justin-adler-pk/).
+I've worked as a .NET Lead at [Angle Auto Finance](https://anglefinance.com.au) in Melbourne, Australia - which is an exciting automobile loan/novated leasing company. Prior to that I've worked mainly at [Homely](https://homely.com.au) as a Senior Software Engineer and Tech Lead, as well as various contracting and consulting roles (after work/weekends) over the years. You can find my full resume and work history on [LinkedIn](https://www.linkedin.com/in/justin-adler-pk/).
 
-I enjoy working on Open Source projects and have contributed to various initiatives over the years. I've created [Simple Authentication (now archived)](https://github.com/purekrome/Simple-Authentication) and [Simple Azure Storage Hybrid Queues](https://github.com/PureKrome/SimpleAzure.Storage.HybridQueues) and [HttpClient Helpers](https://github.com/PureKrome/HttpClient.Helpers).
+I enjoy working on Open Source projects and have contributed to various initiatives over the years. I've created [Simple: Authentication (now archived)](https://github.com/purekrome/Simple-Authentication) and [Simple: Azure Storage Hybrid Queues](https://github.com/PureKrome/SimpleAzure.Storage.HybridQueues) and [HttpClient Helpers](https://github.com/PureKrome/HttpClient.Helpers). More recently I've created [Simple: Observability](https://github.com/SimpleObservability) to help developers easily see the versions of their production microservices.
 
 Another Open Source intiative I tried to kickstart was an open Schema for Real-Estate data called [
 Open RealEstate](https://github.com/OpenRealEstate)
@@ -26,7 +26,7 @@ Open RealEstate](https://github.com/OpenRealEstate)
 - Azure (but also some AWS)
 - Docker
 - MS SQL Server / PostgreSQL / RavenDb / CosmosDb
-- GitHub (but also Azure Devops mainly for Pipelines)
+- GitHub / Azure Devops
 - Visual Studio / VS Code
 - NuGet packages
   - xUnit
