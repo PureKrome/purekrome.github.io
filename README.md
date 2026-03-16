@@ -8,15 +8,38 @@ This is my personal website where I share my projects, blog posts, and other con
 - **Theme** 📄[AstroPaper](https://github.com/satnaing/astro-paper/)
 - **Hosting** GitHub Pages
 
-## 👨🏻‍💻 Running Locally
+## 👨🏻‍💻 Running Locally - docker compose
 
-You can start using this project locally by running the following command in your desired directory:
+You can start using this project locally either by runninng docker commands or in a devcontainer.
+
+### Devcontainer
+
+Just open this project in a devcontainer and it will automatically install the dependencies and start the development server.
+
+### 🧹 Linting & Formatting
+
+Before committing changes, ensure your code is formatted and passes linting:
+
+```bash
+# Check formatting (will show errors if any)
+npm run format:check
+
+# Auto-fix formattingnp
+npm run format
+
+# Check linting
+npm run lint
+```
+
+### Docker compose
+
+Make sure docker is installed and then run the following command in the project directory:
 
 ```bash
 docker compose up
 ```
 
-## 🧹 Linting & Formatting
+### 🧹 Linting & Formatting
 
 Before committing changes, ensure your code is formatted and passes linting:
 
