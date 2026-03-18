@@ -15,7 +15,6 @@
     "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume,volume-opt=uid=1000,volume-opt=gid=1000"
   ],
   "postCreateCommand": "npm install",
-  "postAttachCommand": "bash -lc 'if pgrep -f \"astro dev\" >/dev/null; then echo \"Astro dev already running\"; else npm run dev -- --host 0.0.0.0; fi'",
   "customizations": {
     "vscode": {
       "extensions": [
