@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justin Adler - Senior Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --ink: #1a1a1a;
+        --muted: #555;
+        --accent: #c0392b;
+        --rule: #ddd;
+        --bg: #fafaf8;
+        --card: #fff;
+      }
+
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--ink);
+        background: var(--bg);
+        padding: 2rem 1rem;
+      }
+
+      .page {
+        max-width: 860px;
+        margin: 0 auto;
+        background: var(--card);
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      /* ── HEADER ── */
+      .header {
+        padding: 3rem 3rem 2rem;
+        border-bottom: 3px solid var(--ink);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2rem;
+        align-items: end;
+      }
+
+      .header-name h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3.2rem;
+        letter-spacing: -1px;
+        line-height: 1;
+      }
+
+      .header-name .title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-top: 0.4rem;
+      }
+
+      .header-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        text-align: right;
+        font-size: 0.85rem;
+      }
+
+      .header-links a {
+        color: var(--muted);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.4rem;
+      }
+
+      .header-links a svg {
+        flex-shrink: 0;
+        opacity: 0.7;
+      }
+
+      .header-links a:hover {
+        color: var(--accent);
+      }
+
+      .header-links svg {
+        flex-shrink: 0;
+        opacity: 0.6;
+      }
+
+      /* ── TWO-COL INTRO ── */
+      .intro {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .intro-summary {
+        padding: 2rem 3rem;
+      }
+
+      .section-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+        display: block;
+      }
+
+      /* ── BODY LAYOUT ── */
+      .body {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      /* ── EXPERIENCE ── */
+      .experience {
+        padding: 2rem 3rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .section-heading {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        border-bottom: 2px solid var(--ink);
+        padding-bottom: 0.3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .job {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px dashed var(--rule);
+      }
+
+      .job-header {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 1rem 1.5rem;
+        align-items: flex-start;
+      }
+
+      .job:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .job-logo {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 0.25rem;
+      }
+
+      .job-logo img {
+        max-width: 75px;
+        max-height: 45px;
+        object-fit: contain;
+      }
+
+      .job-logo .logo-text {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .job h3 {
+        font-family: "Source Sans 3", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .job .company {
+        color: var(--accent);
+      }
+
+      .job .period {
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-top: 0.1rem;
+        margin-bottom: 0.6rem;
+        letter-spacing: 0.05em;
+      }
+
+      .job ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .job ul li {
+        padding-left: 1rem;
+        position: relative;
+        margin-bottom: 0.25rem;
+        font-size: 0.92rem;
+        color: #333;
+      }
+
+      .job ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 0.95rem;
+      }
+
+      /* New: Detailed job summary, tech stack and skills */
+      .job-summary2 {
+        margin-top: 0.6rem;
+        padding: 0.75rem 1rem;
+        background: linear-gradient(
+          90deg,
+          rgba(192, 57, 43, 0.04),
+          transparent
+        );
+        border-left: 3px solid var(--accent);
+        color: #333;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        border-radius: 4px;
+      }
+
+      .job-stack,
+      .job-skills {
+        padding: 0.12rem 3rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin: 0 0 0.05rem 0;
+        line-height: 1.25;
+      }
+
+      /* nearly remove gap when stack and skills are adjacent */
+      .job-stack + .job-skills {
+        margin-top: 0.02rem;
+      }
+
+      .job-stack p,
+      .job-skills p {
+        margin: 0;
+      }
+
+      /* ── SKILLS + EDUCATION ── */
+      .lower {
+        border-top: 1px solid var(--rule);
+      }
+
+      .skills {
+        padding: 2rem 3rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 2rem;
+      }
+
+      .education {
+        padding: 1.5rem 3rem 2rem;
+      }
+
+      .skill-group {
+        margin-bottom: 1.25rem;
+      }
+
+      .skill-group h4 {
+        font-weight: 600;
+        font-size: 0.82rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 0.3rem;
+        border-left: 3px solid var(--accent);
+        padding-left: 0.5rem;
+      }
+
+      .skill-group p,
+      .skill-group ul {
+        font-size: 0.88rem;
+        color: #333;
+      }
+
+      .skill-group ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .skill-group ul li {
+        padding-left: 0.75rem;
+        position: relative;
+        margin-bottom: 0.15rem;
+      }
+
+      .skill-group ul li::before {
+        content: "·";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .edu-item {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        gap: 0.5rem 1rem;
+        margin-bottom: 1.25rem;
+        align-items: start;
+      }
+
+      /* Projects + Education two-column layout */
+      .edu-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 2rem;
+        padding: 0 3rem 1.5rem;
+        align-items: start;
+      }
+
+      .projects {
+        padding-top: 0.25rem;
+      }
+
+      .projects-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.25rem 0 0 0;
+      }
+
+      .projects-list li {
+        margin-bottom: 0.35rem;
+      }
+
+      .projects-list a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .projects-list a:hover {
+        text-decoration: underline;
+      }
+
+      /* Ensure Projects and Education headers align in the two-column layout */
+      .edu-row .projects,
+      .edu-row .education {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .edu-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .edu-logo img {
+        width: 55px;
+        max-width: 55px;
+        max-height: 40px;
+        object-fit: contain;
+        display: block;
+      }
+
+      .edu-content strong {
+        display: block;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      .edu-content span {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 640px) {
+        .header {
+          grid-template-columns: 1fr;
+        }
+
+        .header-links {
+          text-align: left;
+        }
+
+        .header-links a {
+          justify-content: flex-start;
+        }
+
+        .intro {
+          grid-template-columns: 1fr;
+        }
+
+        .intro-summary {
+          border-right: none;
+          border-bottom: 1px solid var(--rule);
+        }
+
+        .job-header {
+          grid-template-columns: 72px 1fr;
+          gap: 0.75rem 1rem;
+        }
+
+        .job-logo {
+          justify-content: flex-start;
+        }
+
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .edu-row {
+          grid-template-columns: 1fr;
+          padding: 0 1.5rem 1rem;
+        }
+
+        .edu-row .projects,
+        .edu-row .education {
+          padding: 0 1.5rem 1rem;
+        }
+
+        .edu-item {
+          align-items: center;
+        }
+
+        .edu-row .projects,
+        .edu-row .education {
+          padding: 0 1.5rem 1rem;
+        }
+
+        .lower {
+          grid-template-columns: 1fr;
+        }
+
+        .experience {
+          padding: 1.5rem;
+        }
+
+        .header,
+        .intro-summary,
+        .intro-drive,
+        .skills,
+        .education {
+          padding: 1.5rem;
+        }
+      }
+
+      @media print {
+        .page-break {
+          break-after: page;
+          page-break-after: always;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header-name">
+          <h1>Justin Adler</h1>
+          <div class="title">Senior Software Engineer</div>
+        </div>
+        <div class="header-links">
+          <a href="mailto:justin@adler.com.au">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <polyline points="2,4 12,13 22,4" />
+            </svg>
+            <span>justin@adler.com.au</span>
+          </a>
+          <a href="https://github.com/PureKrome" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+              />
+            </svg>
+            github.com/PureKrome
+          </a>
+          <a href="https://www.world-domination.com.au" target="_blank">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              />
+            </svg>
+            world-domination.com.au
+          </a>
+          <a
+            href="https://bsky.app/profile/world-domination.com.au"
+            target="_blank"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 360 320"
+              fill="currentColor"
+            >
+              <path
+                d="M180 141.964C163.699 110.262 119.308 51.166 78.0617 31.5245C39.0174 12.8867 27.0157 20.0218 20.0569 28.8877C14.1381 36.4774 12.0567 54.3048 12.0567 66.2819C12.0567 78.2589 19.0158 137.055 23.0569 148.85C37.0512 190.019 79.0838 200.875 117.022 196.644C49.6273 207.501 7.03935 228.459 28.0498 282.284C49.0603 336.11 93.0672 321.396 130.006 308.578C166.945 295.76 180 280.049 180 280.049C180 280.049 193.055 295.76 229.994 308.578C266.933 321.396 310.94 336.11 331.95 282.284C352.961 228.459 310.373 207.501 242.978 196.644C280.916 200.875 322.949 190.019 336.943 148.85C340.984 137.055 347.943 78.2589 347.943 66.2819C347.943 54.3048 345.862 36.4774 339.943 28.8877C332.984 20.0218 320.983 12.8867 281.938 31.5245C240.692 51.166 196.301 110.262 180 141.964Z"
+              />
+            </svg>
+            bsky.app/world-domination.com.au
+          </a>
+        </div>
+      </header>
+
+      <!-- INTRO -->
+      <div class="intro">
+        <div class="intro-summary">
+          <span class="section-label">Summary</span>
+          <p>
+            Senior .NET Cloud Architect and Engineer with 15+ years across real
+            estate, fintech and automotive - from early-stage startups to
+            international consultancies. Deep expertise in the Microsoft stack
+            (.NET FF to .NET 10), Azure/AWS and distributed backend systems.
+            Comfortable owning the full stack of technical leadership:
+            architecture, team building, delivery and client engagement. A
+            hands-on lead who stays close to the tools - I contribute
+            technically while driving architecture, delivery and team growth.
+          </p>
+          <p style="margin-top: 0.75rem">
+            What I bring: faster delivery through tight, repeatable processes.
+            Healthy codebases built on solid engineering standards. Cloud
+            infrastructure that's right-sized and cost-efficient. A team culture
+            that fosters growth and continuous learning.
+          </p>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <section class="experience">
+        <h2 class="section-heading">Experience</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-logo">
+              <img
+                src="data:image/png;base64,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"
+                alt="Syion"
+              />
+            </div>
+            <div class="job-summary">
+              <h3>
+                <span class="company">Technology Lead</span> - Syion.com
+                (Australia + Singapore)
+              </h3>
+              <div class="period">May 2024 - Nov 2025</div>
+            </div>
+          </div>
+          <div class="job-summary2">
+            <p>
+              Brought in to provide technical leadership across a team with some
+              fragmented process. Defined engineering standards, modernised
+              legacy .NET infrastructure and introduced delivery frameworks that
+              improved both output quality and team cohesion. Hands-on across
+              the full stack - from infrastructure and tooling through to code
+              quality and delivery process - while having to maintain close
+              client relationships and accountability for project outcomes.
+            </p>
+          </div>
+          <ul>
+            <li>
+              Organised 10 engineers across concurrent client projects using
+              SCRUM - decomposed product requirements into JIRA tickets with
+              estimates, descriptions and acceptance criteria; ran fortnightly
+              sprints with grooming and retros
+            </li>
+            <li>
+              Modernised two legacy automotive dealership platforms from .NET
+              Framework 4.6.2 to .NET 8; introduced Docker + docker-compose for
+              a consistent local dev experience; cleaned up a fragmented
+              multi-repo git process into a single-repo workflow; added New
+              Relic for APM and error visibility
+            </li>
+            <li>
+              Started using serverless AWS services for newer projects - .NET 8
+              with SNS, Lambda or App-Runner
+            </li>
+            <li>
+              Cut AWS spend by ~45% ($11K/month down to ~$6K/month) with further
+              savings still available - eliminated over-provisioned resources
+              and reduced dev environment costs to near-zero via a custom Slack
+              commands that spins up resources on demand with an automatic
+              1-hour teardown
+            </li>
+            <li>
+              Led on-site client engagement: requirements gathering, quoting,
+              milestone tracking and prioritisation - serving as the primary
+              technical point of contact
+            </li>
+            <li>
+              Elevated team capability through enforced PR + test review gates,
+              consistent solution layouts, coding standards and internal demos
+              (e.g. hands-on Docker/docker-compose walkthroughs)
+            </li>
+          </ul>
+          <div class="job-stack">
+            <p>
+              💻 Stack: AWS - EC2, SNS, SES, Amplify, Lambda, Cognito, RDS, S3,
+              IAM, App-Runner, Route 53; Cloudflare
+            </p>
+          </div>
+          <div class="job-skills">
+            <p>
+              💎 Skills: C#, ASP.NET, .NET Framework, AWS, ASP.NET Core,
+              Microsoft SQL, Technical Leadership, Solution Architecture,
+              Mentoring, SCRUM process
+            </p>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-logo">
+              <img
+                src="data:image/png;base64,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"
+                alt="Homely"
+              />
+            </div>
+            <div class="job-summary">
+              <h3>
+                <span class="company">Senior Software Engineer</span> -
+                Homely.com.au (Australia)
+              </h3>
+              <div class="period">2013 - May 2024</div>
+            </div>
+          </div>
+          <div class="job-summary2">
+            <p>
+              Led the engineering team (up to ~8 developers) through a
+              significant period of growth and modernisation - including a
+              product pivot and rebrand from StreetAdvisor and a full migration
+              from on-premises infrastructure to Azure.
+            </p>
+          </div>
+          <ul>
+            <li>
+              Architected and owned the migration from on-prem to Azure,
+              selecting and implementing services across App Services, Azure
+              Functions, Storage (and AWS S3), Azure Cloud Services (now
+              obsolete), Azure VM's
+            </li>
+            <li>
+              Built and maintained a high-availability ingestion pipeline
+              processing tens of thousands of listing files per day from ~80
+              real estate customer integrations - zero planned downtime
+              tolerance
+            </li>
+            <li>
+              Delivered and maintained new premium features (property listings,
+              agent finder, background processes like listing expiry, push
+              notifications, etc.) with .NET and Azure App Services and Azure
+              Functions
+            </li>
+            <li>
+              Established observability and monitoring practices using
+              Application Insights and broader Azure monitoring tooling
+            </li>
+            <li>
+              Drove adoption of containerisation and modern deployment practices
+              to simplify deployment and local development
+            </li>
+          </ul>
+          <div class="job-stack">
+            <p>
+              💻 Stack: Azure - App Services, Functions, Azure Sql, Storage,
+              Container Apps and Registries, Application Insights, Entra ID
+              (previously Azure AD), Web Application Firewall, Cloud Services
+              (now obsolete), Azure Cache for Redis, Virtual Machines, Virtual
+              Networks and Subscriptions; Cloudflare; GitHub; Azure DevOps;
+              Elastic Cloud; AWS - S3
+            </p>
+          </div>
+          <div class="job-skills">
+            <p>
+              💎 Skills: C# / ASP.NET Core, Microsoft SQL, ASP.NET / .NET Full
+              Framework, Technical Leadership, Solution Architecture, Mentoring,
+              SCRUM process
+            </p>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-logo">
+              <img
+                src="data:image/png;base64,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"
+                alt="StreetAdvisor"
+              />
+            </div>
+            <div class="job-summary">
+              <h3>
+                <span class="company">Senior Software Engineer</span> -
+                StreetAdvisor (Australia)
+              </h3>
+              <div class="period">2007 - 2013</div>
+            </div>
+          </div>
+          <div class="job-summary2">
+            <p>
+              As the founding engineer on StreetAdvisor, I architected and built
+              the platform from the ground up - writing the first line of code
+              through to production. Everything outside of the frontend was mine
+              to design, build, and own. Over time I grew and led the
+              engineering team, carrying that technical leadership through to
+              the product's pivot and rebrand as Homely.com.au.
+            </p>
+          </div>
+          <ul>
+            <li>
+              Built the core platform end-to-end (everything outside of the
+              frontend) - APIs, data, infrastructure, and back-of-house systems
+            </li>
+            <li>
+              Engineered suburb and agent autocomplete targeting sub-100ms
+              response times, built on .NET and RavenDB
+            </li>
+            <li>
+              Designed and maintained all infrastructure across its full
+              evolution - from on-premises servers, to co-located hosting, to
+              Azure. Built the business case for cloud migration, cutting server
+              provisioning time from days to minutes and reducing monthly
+              infrastructure costs by ~60%
+            </li>
+            <li>
+              Implemented geospatial suburb mapping including point-in-polygon,
+              WGS84 coordinate handling, and early MS SQL geospatial tooling -
+              enabling inline maps to display administrative boundaries and
+              street polygons
+            </li>
+            <li>
+              Wore multiple hats across project management, scrum master, and
+              business analyst - collaborating with product owners to translate
+              business requirements into clearly defined development initiatives
+              delivered to production
+            </li>
+          </ul>
+          <div class="job-stack">
+            <p>
+              💻 Stack: Azure - Web Apps (now App Services), Functions, Storage,
+              Cloud Services (now obsolete), Virtual Machines, Virtual Networks
+              and Subscriptions; GitHub; Azure DevOps; AWS - S3
+            </p>
+          </div>
+          <div class="job-skills">
+            <p>
+              💎 Skills: C# / ASP.NET / .NET Full Framework, Microsoft SQL,
+              Technical Leadership, Solution Architecture, SCRUM process
+            </p>
+          </div>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <div class="job-logo">
+              <img
+                src="data:image/png;base64,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"
+                alt="Stargate Group"
+              />
+            </div>
+            <div class="job-summary">
+              <h3>
+                <span class="company">Software Engineer</span> - Stargate Group
+                (Australia)
+              </h3>
+            </div>
+          </div>
+          <div class="job-summary2">
+            <p>
+              As the founding and sole engineer on NetVal.com.au, I designed and
+              built Australia's first online property valuation portal from
+              scratch — taking valuations that previously took over a week down
+              to a day or two. Alongside NetVal, I contributed to World
+              Originate, a non-bank mortgage lending platform, handling BAU
+              development and infrastructure.
+            </p>
+          </div>
+          <ul>
+            <li>
+              Founded and built NetVal.com.au — Australia's first online
+              property valuation portal — reducing valuation turnaround from
+              over a week to one to two days
+            </li>
+            <li>
+              Contributed to defining the LIXI Valuations data standard,
+              improving inter-company data communication across the property and
+              lending industry
+            </li>
+            <li>
+              Managed on-premises DevOps infrastructure for World Originate, an
+              independent property loan management platform
+            </li>
+            <li>
+              BAU development and feature delivery for World Originate —
+              including a migration from VB.NET to C# / .NET, and introduction
+              of automated testing and code quality guardrails
+            </li>
+          </ul>
+          <div class="job-stack">
+            <p>
+              💻 Stack: On-Prem then Co-Located: Windows Server / IIS; BitBucket
+            </p>
+          </div>
+          <div class="job-skills">
+            <p>💎 Skills: C# / ASP.NET / .NET Full Framework, Microsoft SQL</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS + EDUCATION -->
+      <div class="lower">
+        <section class="skills">
+          <h2 class="section-heading">Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h4>Backend &amp; Application Development</h4>
+              <ul>
+                <li>C# / .NET Full Framework to .NET 10</li>
+                <li>RESTful API design</li>
+                <li>
+                  Scalable microservices, inter-service communication,
+                  resiliency patterns, CQRS
+                </li>
+                <li>
+                  Event-driven systems (Azure Service Bus / RabbitMQ, Azure
+                  Event Grid)
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4>Data Architecture &amp; Storage</h4>
+              <ul>
+                <li>
+                  Relational Databases (MS SQL &amp; PostgreSQL) - design,
+                  performance tuning, data security
+                </li>
+                <li>Non-Relational Databases (CosmosDB, RavenDB, MongoDB)</li>
+                <li>Redis (caching strategies)</li>
+                <li>ElasticSearch (search indexing &amp; optimisation)</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4>Cloud &amp; DevOps Engineering</h4>
+              <ul>
+                <li>
+                  Azure: Functions, App Service, Container Apps and Registries,
+                  Service Bus, Event Grid, Storage, KeyVault, FrontDoor and WAF,
+                  Application Insights, VMs, Virtual Networks, Subscriptions
+                </li>
+                <li>
+                  AWS: S3, EC2, Lambda, Amplify, CloudWatch, DynamoDB, RDS
+                </li>
+                <li>Containerisation (Docker / docker-compose)</li>
+                <li>CI/CD (GitHub Actions, Azure DevOps, Jenkins)</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4>Security &amp; Identity</h4>
+              <ul>
+                <li>Azure Entra, Auth0, Okta, Identity Server</li>
+                <li>
+                  Secure authentication &amp; authorisation design (OAuth)
+                </li>
+                <li>API security best practices (OWASP, Dependabot, Snyk)</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4>Observability &amp; Production Engineering</h4>
+              <ul>
+                <li>Azure Monitor, Seq, New Relic, Sentry</li>
+                <li>Structured logging &amp; monitoring</li>
+                <li>Open Telemetry (OTel with Azure App Insights)</li>
+                <li>Production incident diagnosis &amp; optimisation</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4>AI-Augmented Development</h4>
+              <ul>
+                <li>Claude.ai</li>
+                <li>GitHub Copilot (local and cloud controlled)</li>
+                <li>OpenCode</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4>Tooling &amp; Scripting</h4>
+              <ul>
+                <li>GitHub, Azure DevOps, JIRA, Slack, Teams</li>
+                <li>PowerShell &amp; Bash</li>
+                <li>Postman</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <div class="edu-row">
+          <section class="projects">
+            <h2 class="section-heading">Portfolio</h2>
+            <ul class="projects-list">
+              <li>
+                <a href="https://www.Homely.com.au" target="_blank"
+                  >🌏 Homely.com.au</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/PureKrome/HttpClient.Helpers"
+                  target="_blank"
+                  >📦 HttpClient.Helpers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/PureKrome/SimpleAzure.Storage.HybridQueues"
+                  target="_blank"
+                  >📦 SimpleAzure.Storage.HybridQueues</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/SimpleObservability" target="_blank"
+                  >📦 SimpleObservability</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/PureKrome/SimpleTestcontainers.xUnit.v3"
+                  target="_blank"
+                  >📦 SimpleTestcontainers.xUnit.v3</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/OpenRealEstate" target="_blank"
+                  >📦 OpenRealEstate</a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section class="education">
+            <h2 class="section-heading">Education</h2>
+
+            <div class="edu-item">
+              <div class="edu-logo">
+                <img
+                  src="data:image/png;base64,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"
+                  alt="RMIT University"
+                />
+              </div>
+              <div class="edu-content">
+                <strong>Bachelor of Applied Science (Computer Science)</strong>
+                <span>RMIT University</span>
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-logo">
+                <img
+                  src="data:image/png;base64,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"
+                  alt="Geelong Grammar School"
+                />
+              </div>
+              <div class="edu-content">
+                <strong>Secondary Education</strong>
+                <span>Geelong Grammar School</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

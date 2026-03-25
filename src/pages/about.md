@@ -5,7 +5,9 @@ title: "About"
 
 ## Curriculum vitae
 
-<a href="/assets/files/Justin_Adler_-_Senior_Software_Engineer_-_March_2026.pdf" download>📝 Justin Adler CV March 2026</a>
+<a href="/assets/files/Justin_Adler_-_Senior_Software_Engineer_-_April_2026.pdf" download>📝 Justin Adler CV April 2026 PDF</a>
+
+<a href="/assets/files/Justin_Adler_-_Senior_Software_Engineer_-_April_2026.html" target="_blank">📝 Justin Adler CV April 2026 HTML</a>
 
 <a href="https://www.linkedin.com/in/justin-adler-pk/" target="_blank">🔗 LinkedIn</a>
 
