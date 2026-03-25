@@ -35,7 +35,7 @@
         line-height: 1.6;
         color: var(--ink);
         background: var(--bg);
-        padding: 2rem 1rem;
+        padding: 0 1rem 1rem;
       }
 
       .page {
@@ -47,7 +47,7 @@
 
       /* ── HEADER ── */
       .header {
-        padding: 3rem 3rem 2rem;
+        padding: 10px 3rem 2rem;
         border-bottom: 3px solid var(--ink);
         display: grid;
         grid-template-columns: 1fr auto;
@@ -135,7 +135,7 @@
 
       .section-heading {
         font-family: "Playfair Display", serif;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         border-bottom: 2px solid var(--ink);
         padding-bottom: 0.3rem;
         margin-bottom: 1.5rem;
@@ -146,7 +146,7 @@
         grid-template-columns: 1fr;
         gap: 0.85rem;
         margin-bottom: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 0.5rem;
         border-bottom: 1px dashed var(--rule);
       }
 
@@ -228,7 +228,7 @@
 
       /* New: Detailed job summary, tech stack and skills */
       .job-summary2 {
-        margin-top: 0.6rem;
+        margin-top: 1px;
         padding: 0.75rem 1rem;
         background: linear-gradient(
           90deg,
@@ -267,7 +267,7 @@
       }
 
       .skills {
-        padding: 2rem 3rem;
+        padding: 2rem 3rem 0.5rem;
         border-bottom: 1px solid var(--rule);
       }
 
@@ -471,6 +471,11 @@
           break-after: page;
           page-break-after: always;
         }
+
+        .print-break-before {
+          break-before: page;
+          page-break-before: always;
+        }
       }
     </style>
   </head>
@@ -632,8 +637,8 @@
             </li>
             <li>
               Elevated team capability through enforced PR + test review gates,
-              consistent solution layouts, coding standards and internal demos
-              (e.g. hands-on Docker/docker-compose walkthroughs)
+              coding standards and internal demos (e.g. hands-on
+              Docker/docker-compose technical sessions)
             </li>
           </ul>
           <div class="job-stack">
@@ -701,6 +706,24 @@
             <li>
               Drove adoption of containerisation and modern deployment practices
               to simplify deployment and local development
+            </li>
+            <li>
+              Led cross-functional agile ceremonies - standups, sprint planning,
+              and retrospectives
+            </li>
+            <li>
+              Mentored junior and mid-level developers; owned onboarding
+              end-to-end for new engineering hires
+            </li>
+            <li>
+              Conducted engineering hiring interviews and contributed to team
+              growth decisions
+            </li>
+            <li>
+              Owned code quality across the team — establishing review
+              standards, setting technical direction through PRs + CI/CD and
+              maintaining a consistent engineering standard as the team and
+              codebase grew.
             </li>
           </ul>
           <div class="job-stack">
@@ -871,19 +894,6 @@
             </div>
 
             <div class="skill-group">
-              <h4>Data Architecture &amp; Storage</h4>
-              <ul>
-                <li>
-                  Relational Databases (MS SQL &amp; PostgreSQL) - design,
-                  performance tuning, data security
-                </li>
-                <li>Non-Relational Databases (CosmosDB, RavenDB, MongoDB)</li>
-                <li>Redis (caching strategies)</li>
-                <li>ElasticSearch (search indexing &amp; optimisation)</li>
-              </ul>
-            </div>
-
-            <div class="skill-group">
               <h4>Cloud &amp; DevOps Engineering</h4>
               <ul>
                 <li>
@@ -900,13 +910,15 @@
             </div>
 
             <div class="skill-group">
-              <h4>Security &amp; Identity</h4>
+              <h4>Data Architecture &amp; Storage</h4>
               <ul>
-                <li>Azure Entra, Auth0, Okta, Identity Server</li>
                 <li>
-                  Secure authentication &amp; authorisation design (OAuth)
+                  Relational Databases (MS SQL &amp; PostgreSQL) - design,
+                  performance tuning, data security
                 </li>
-                <li>API security best practices (OWASP, Dependabot, Snyk)</li>
+                <li>Non-Relational Databases (CosmosDB, RavenDB, MongoDB)</li>
+                <li>Redis (caching strategies)</li>
+                <li>ElasticSearch (search indexing &amp; optimisation)</li>
               </ul>
             </div>
 
@@ -917,6 +929,17 @@
                 <li>Structured logging &amp; monitoring</li>
                 <li>Open Telemetry (OTel with Azure App Insights)</li>
                 <li>Production incident diagnosis &amp; optimisation</li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h4>Security &amp; Identity</h4>
+              <ul>
+                <li>Azure Entra, Auth0, Okta, Identity Server</li>
+                <li>
+                  Secure authentication &amp; authorisation design (OAuth)
+                </li>
+                <li>API security best practices (OWASP, Dependabot, Snyk)</li>
               </ul>
             </div>
 
