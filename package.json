@@ -4,7 +4,7 @@
   "version": "5.5.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
+    "build": "astro check && astro build && pagefind --site dist && node -e \"require('fs').cpSync('dist/pagefind', 'public/pagefind', { recursive: true })\"",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
@@ -31,7 +31,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@types/lodash.kebabcase": "^4.1.9",
     "@typescript-eslint/parser": "^8.53.0",
-    "astro": "^5.16.11",
+    "astro": "^6.1.8",
     "eslint": "^9.30.1",
     "eslint-plugin-astro": "^1.3.1",
     "globals": "^17.0.0",
