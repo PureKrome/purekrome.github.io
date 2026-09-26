@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/javascript-node:1-22-bullseye
+FROM mcr.microsoft.com/devcontainers/javascript-node:5-24-bookworm
 
 # Enable reliable file watching in containerized environments (especially on Windows/macOS hosts)
 ENV WATCHPACK_POLLING=true

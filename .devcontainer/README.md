@@ -4,7 +4,7 @@ This folder contains the VS Code Dev Container setup for the Astro site.
 
 ## What it does
 
-- Builds from `.devcontainer/Dockerfile` using a Node 20 devcontainer base image.
+- Builds from `.devcontainer/Dockerfile` using a Node 24 devcontainer base image.
 - Installs dependencies on first create (`postCreateCommand`: `npm install`).
 - Automatically starts Astro when VS Code attaches (`postAttachCommand`) at `0.0.0.0:4321`.
 - Forwards port `4321` to the host.
